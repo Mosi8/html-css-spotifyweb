@@ -90,6 +90,7 @@ nav{
     position: fixed;
     top: 0;
     left: 40px;
+    z-index: 2;
 }
 
 #up_bottone{
@@ -171,6 +172,10 @@ nav{
     transform: translate(-50%, -50%);
     font-size: 100px;
     display: none;
+}
+
+.album:hover .filter_play{
+    filter: opacity(.5)
 }
 
 .album:hover .far.fa-play-circle{

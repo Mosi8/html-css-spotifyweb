@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
         <title>Spotify</title>
     </head>
     <body>
@@ -17,13 +20,13 @@
                         <img id="logo_piccolo" src="img/logo-small.svg">
                     </div>
                     <div class="menu_nav">
-                        <div class="oo">
+                        <div class="icone_nav">
                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"/></svg>
                         </div>
-                        <div class="oo">
+                        <div class="icone_nav">
                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"/></svg>
                         </div>
-                        <div class="oo">
+                        <div class="icone_nav">
                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"/></svg>
                         </div>
                     </div>
@@ -37,8 +40,104 @@
                     </div>
                 </div>
             </nav>
-            <section>
-
+            <section class="main_destro">
+                <div id="up_piano">
+                    <div class="contenitore_bottone">
+                        <button id="up_bottone" >EFFETTUA L'UPGRADE</button>
+                    </div>
+                </div>
+                <div class="parte_centrale">
+                    <ul id="lista">
+                        <li>IN EVIDENZA</li>
+                        <li>PODCAST</li>
+                        <li>CLASSIFICHE</li>
+                        <li>GENERI E MOOD</li>
+                        <li>NUOVE USCITE</li>
+                        <li>SCOPRI</li>
+                    </ul>
+                    <div class="brani_recenti">
+                        <h4>Recently played</h4>
+                        <div class="brani">
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/metal_lifting.jpg">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <h5>Heavy Metal</h5>
+                                <span>Subtitle</span>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/stranger.jpeg">
+                                </div>
+                                <h5>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h5>
+                                <span>Kyle Dixon &amp; Michael Stein</span>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/aquietplace.jpeg">
+                                </div>
+                                <h5>A quiet place</h5>
+                                <span>Subtitle</span>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/split.jpeg">
+                                </div>
+                                <h5>Split</h5>
+                                <span>Subtitle</span>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/cure.jpeg">
+                                </div>
+                                <h5>A cure of wellness</h5>
+                                <span>Subtitle</span>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/sinister.jpeg">
+                                </div>
+                                <h5>Sinister</h5>
+                                <span>Subtitle</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="creato_per">
+                        <h4>Creato per John Doe</h4>
+                        <div class="brani">
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/radar.jpeg">
+                                </div>
+                                <h5>Release Radar</h5>
+                            </div>
+                            <div class="singoli_brani">
+                                <div class="album">
+                                    <img src="img/mixdaily.jpeg">
+                                </div>
+                                <h5>Daily Mix 1</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="creato_per">
+                        <h4>Artisti pi&ugrave; popolari</h4>
+                        <div class="artisti">
+                            <div class="singoli_artisti">
+                                <div class="foto_artisti">
+                                    <img src="img/youg.jpeg">
+                                </div>
+                                <h5>Lana Del Rey</h5>
+                            </div>
+                            <div class="singoli_artisti">
+                                <div class="foto_artisti">
+                                    <img src="img/einaudi.jpeg">
+                                </div>
+                                <h5>Luigi Einaudi</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>

@@ -4,11 +4,15 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 main{
     width: 100%;
     height: calc(100vh - 60px);
 }
-
+/* barra destra  */
 nav{
     height: calc(100vh - 60px);
     width: 40px;
@@ -37,9 +41,10 @@ nav{
 .menu_nav{
     width: 80%;
     fill: rgb(200, 200, 200);
+    cursor: pointer;
 }
 
-.oo:hover svg,
+.icone_nav:hover svg,
 #download:hover svg{
     fill: #fff
 }
@@ -54,6 +59,7 @@ nav{
 #download{
     width: 60%;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 #user{
     background-color: rgb(109, 109, 109);
@@ -64,16 +70,137 @@ nav{
     overflow: hidden;
     margin-bottom: 5px;
 }
-
-section{
+/* parte centrale  */
+.main_destro{
     height: calc(100vh - 60px);
     width: calc(100% - 40px);
     background-color: rgb(16, 19, 25);
     display: inline-block;
-    margin-left: 40px;
+    position: relative;
+    left: 40px;
 }
 
+#up_piano{
+    width: calc(100% - 40px);
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 40px;
+}
 
+#up_bottone{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 25px;
+    border: solid 1px #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.contenitore_bottone:hover #up_bottone{
+    transform: scale(1.1);
+}
+
+/* parte centrale musicale  */
+.parte_centrale{
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: rgb(20, 25, 34);
+    overflow: scroll;
+    padding-top: 70px;
+}
+
+#lista{
+    list-style-type: none;
+    color: rgb(105, 108, 113);
+    text-align: center;
+    font-weight: 800;
+    font-size: 8px;
+}
+
+#lista li{
+    display: inline-block;
+    margin: 10px 8px;
+    cursor: pointer;
+}
+
+.brani_recenti,
+.creato_per{
+    width: 92%;
+    margin: 20px auto;
+}
+
+.brani_recenti h4,
+.creato_per h4{
+    font-weight: 800;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.brani,
+.artisti{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.singoli_brani,
+.singoli_artisti{
+    width: 48%;
+    text-align: center;
+    color: #fff;
+}
+
+.album{
+    width: 100%;
+    position: relative;
+}
+
+.far.fa-play-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    display: none;
+}
+
+.album:hover .far.fa-play-circle{
+    display: block;
+}
+
+.album img,
+.foto_artisti img{
+    width: 100%;
+}
+
+.foto_artisti img{
+    border-radius: 50%;
+}
+
+.singoli_brani h5,
+.singoli_artisti h5{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.singoli_brani span,
+.singoli_artisti span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: rgb(127, 125, 132);
+}
+/* comandi musicali */
 footer{
     width: 100%;
     height: 60px;

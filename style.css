@@ -87,23 +87,37 @@ nav{
 
 #down_icona{
     width: 15px;
+    height: 15px;
 }
 
 #download span{
     font-size: 10px;
     display: none;
+    color: rgb(127, 125, 132);
 }
 
 #user{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+#user_icona{
     background-color: rgb(109, 109, 109);
     border-radius: 50%;
     height: 20px;
     width: 20px;
     fill: #fff;
     overflow: hidden;
-    margin-bottom: 5px;
     cursor: pointer;
 }
+
+#user h4{
+    font-size: 10px;
+    display: none;
+    color: #fff;
+}
+
 /* parte centrale  */
 .main_destro{
     height: 100%;
@@ -443,7 +457,7 @@ footer{
     nav{
         height: calc(100vh - 60px);
         width: 200px;
-        padding-left: 10px;
+        padding: 0 10px;
     }
 
     #menu {
@@ -471,8 +485,32 @@ footer{
         align-items: flex-start;
     }
     
+    #download{
+        flex-direction: row;
+        border-bottom: solid 1px rgb(109, 109, 109);
+    }  
+    
+    #down_icona{
+        margin-right: 5px;
+    }
+
     #download span{
         display: block;
+    }
+
+    #download:hover span{
+        color: #fff;
+    }
+
+    #user{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    #user h4{
+        display: block;
+        margin-left: 10px;
     }
 
     /* parte centrale  */

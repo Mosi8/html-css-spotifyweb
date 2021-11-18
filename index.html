@@ -21,13 +21,13 @@
                     </div>
                     <div class="menu_nav">
                         <div class="icone_nav">
-                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"/></svg>
+                            <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"/></svg></a>
                         </div>
                         <div class="icone_nav">
-                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"/></svg>
+                            <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"/></svg></a>
                         </div>
                         <div class="icone_nav">
-                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"/></svg>
+                            <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"/></svg></a>
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,17 @@
                 </div>
                 <div class="parte_centrale">
                     <ul id="lista">
-                        <li>IN EVIDENZA</li>
-                        <li>PODCAST</li>
-                        <li>CLASSIFICHE</li>
-                        <li>GENERI E MOOD</li>
-                        <li>NUOVE USCITE</li>
-                        <li>SCOPRI</li>
+                        <li>
+                            <span class="lista_testo">IN EVIDENZA</span>
+                            <div class="linea_selezione"></div>
+                        </li>
+                        <li><span class="lista_testo">PODCAST</span></li>
+                        <li><span class="lista_testo">CLASSIFICHE</span></li>
+                        <li><span class="lista_testo">GENERI E MOOD</span></li>
+                        <li><span class="lista_testo">NUOVE USCITE</span></li>
+                        <li><span class="lista_testo">SCOPRI</span></li>
                     </ul>
+                    <!-- Album recenti  -->
                     <div class="brani_recenti">
                         <h4>Recently played</h4>
                         <div class="brani">
@@ -108,6 +112,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Creato per  -->
                     <div class="creato_per">
                         <h4>Creato per John Doe</h4>
                         <div class="brani">
@@ -127,20 +132,23 @@
                             </div>
                         </div>
                     </div>
+                    <!-- artisti  -->
                     <div class="creato_per">
                         <h4>Artisti pi&ugrave; popolari</h4>
                         <div class="artisti">
                             <div class="singoli_artisti">
                                 <div class="foto_artisti">
-                                    <img src="img/youg.jpeg">
+                                    <img class="filter_play" src="img/youg.jpeg">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                                 <h5>Lana Del Rey</h5>
                             </div>
                             <div class="singoli_artisti">
                                 <div class="foto_artisti">
-                                    <img src="img/einaudi.jpeg">
+                                    <img class="filter_play" src="img/einaudi.jpeg">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
-                                <h5>Luigi Einaudi</h5>
+                                <h5>Ludovico Einaudi</h5>
                             </div>
                         </div>
                     </div>
@@ -148,7 +156,65 @@
             </section>
         </main>
         <footer>
-
+            <div id="ascolto">
+                <div class="brano">
+                    <div id="copertina">
+                        <img src="img/sinister.jpeg">
+                    </div>
+                    <div class="brano_autore">
+                        <div class="nome_brano">
+                            <span>Sinister</span>
+                        </div>
+                        <div class="nome_autore">
+                            <span>Brano Nome</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="folder_like">
+                    <div id="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div id="folder">
+                        <i class="far fa-folder"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="player">
+                <div id="tasti_player">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <div id="play_barra">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo-alt"></i>
+                </div>
+                <div id="barra_minuti">
+                    <div class="minuti">
+                        <span>0&colon;25</span>
+                    </div>
+                    <div class="bar">
+                        <div class="bar_complete">
+                            <div class="bar_selection"></div>
+                        </div>
+                    </div>
+                    <div class="minuti">
+                        <span>4&colon;35</span>
+                    </div>
+                </div>
+            </div>
+            <div id="volume_share">
+                <i class="fas fa-list"></i>
+                <i class="fas fa-desktop"></i>
+                <i class="fas fa-volume-up"></i>
+                <div class="bar_volume">
+                    <div class="bar">
+                        <div class="bar_complete">
+                            <div class="bar_selection"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </body>
 </html>

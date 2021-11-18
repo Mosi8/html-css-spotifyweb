@@ -6,11 +6,13 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 
 main{
     width: 100%;
     height: calc(100vh - 60px);
+    overflow: hidden;
 }
 /* barra destra  */
 nav{
@@ -29,6 +31,8 @@ nav{
 #menu {
     margin-top: 5px;
     width: 25px;
+    height: calc(100% - 80px);
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +45,6 @@ nav{
 .menu_nav{
     width: 80%;
     fill: rgb(200, 200, 200);
-    cursor: pointer;
 }
 
 .icone_nav:hover svg,
@@ -51,8 +54,10 @@ nav{
 
 #setting{
     width: 25px;
+    height: 80px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     fill: rgb(200, 200, 200);
 }
@@ -69,10 +74,11 @@ nav{
     fill: #fff;
     overflow: hidden;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 /* parte centrale  */
 .main_destro{
-    height: calc(100vh - 60px);
+    height: 100%;
     width: calc(100% - 40px);
     background-color: rgb(16, 19, 25);
     display: inline-block;
@@ -130,6 +136,21 @@ nav{
     display: inline-block;
     margin: 10px 8px;
     cursor: pointer;
+    position: relative;
+}
+
+#lista li:hover .lista_testo{
+    color: #fff;
+}
+
+.linea_selezione{
+    width: 18px;
+    height: 2px;
+    background-color: rgb(191, 253, 91);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2px;
 }
 
 .brani_recenti,
@@ -158,14 +179,18 @@ nav{
     width: 48%;
     text-align: center;
     color: #fff;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 
-.album{
+.album,
+.foto_artisti{
     width: 100%;
     position: relative;
 }
 
-.far.fa-play-circle{
+.album .far.fa-play-circle,
+.foto_artisti .far.fa-play-circle{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -174,11 +199,13 @@ nav{
     display: none;
 }
 
-.album:hover .filter_play{
+.singoli_brani:hover .filter_play,
+.singoli_artisti:hover .filter_play{
     filter: opacity(.5)
 }
 
-.album:hover .far.fa-play-circle{
+.singoli_brani:hover .far.fa-play-circle,
+.singoli_artisti:hover .far.fa-play-circle{
     display: block;
 }
 
@@ -214,4 +241,169 @@ footer{
     bottom: 0;
     left: 0;
     z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+/* footer right  */
+#volume_share{
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 8px;
+}
+
+#volume_share .fas{
+    cursor: pointer;
+}
+
+.bar_volume{
+    width: 60px;
+    display: inline-block;
+}
+/* barra con pallino  */
+.bar{
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.bar_complete{
+    width: 25%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.bar_selection{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background-color: #fff;
+    border-radius: 50%;
+    display: none;
+}
+
+.bar:hover .bar_complete{
+    background-color: rgb(191, 253, 91);
+}
+
+.bar:hover .bar_selection{
+    display: block;
+}
+
+/* footer left  */
+#ascolto{
+    width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.brano{
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#copertina{
+    width: 30%;
+}
+
+#copertina img{
+    width: 100%;
+}
+
+.brano_autore{
+    width: 60%;
+    font-weight: 800;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nome_autore{
+    font-size: 9px;
+    color: rgb(127, 125, 132);
+}
+
+.folder_like{
+    width: 18px;
+    font-size: 15px;
+    color: rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+.nome_brano:hover span,
+.nome_autore:hover span{
+    text-decoration: underline;
+}
+
+#like:hover .far.fa-heart,
+#folder:hover .far.fa-folder{
+    color: #fff;
+}
+
+/* tasti e barra player  */
+#player{
+    width: 135px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#tasti_player{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
+#tasti_player .fas{
+    cursor: pointer;
+}
+
+#play_barra .far.fa-play-circle{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#play_barra:hover .far.fa-play-circle{
+    transform: scale(1.2);
+}
+
+#barra_minuti{
+    width: 135px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#barra_minuti .bar{
+    margin: 0 4px;
+}
+.minuti{
+    font-size: 7px;
+}
+

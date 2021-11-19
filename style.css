@@ -466,7 +466,7 @@ footer {
     font-size: 7px;
 }
 
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 581px) {
     nav{
         height: calc(100vh - 60px);
         width: 200px;
@@ -513,7 +513,7 @@ footer {
     /* playlist  */
     .playlist {
         width: 100%;
-        height: calc(100% - 300px);
+        height: 100%;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -558,7 +558,7 @@ footer {
     }
 
     #multi_playlist {
-        height: 200px;
+        height: 300px;
         min-height: 150px;
         overflow: scroll;
     }

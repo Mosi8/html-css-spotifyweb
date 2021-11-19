@@ -59,6 +59,7 @@ nav {
 
 .icone_nav {
     width: 100%;
+    padding-bottom: 4px;
 }
 .menu_nav .icone_nav a {
     width: 22px;
@@ -461,7 +462,7 @@ footer {
     transform: scale(1.2);
 }
 
-.prova:hover {
+.animazione_giro:hover {
     animation: giro 0.5s linear;
 } 
 

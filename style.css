@@ -1,21 +1,21 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
 
-main{
+main {
     width: 100%;
     height: calc(100vh - 60px);
     overflow: hidden;
 }
 /* barra sinistra  */
-nav{
+nav {
     height: calc(100vh - 60px);
     width: 50px;
     background-color: #000;
@@ -108,13 +108,13 @@ nav{
     color: rgb(127, 125, 132);
 }
 
-#user{
+#user {
     width: 20px;
     height: 20px;
     margin-bottom: 10px;
 }
 
-#user_icona{
+#user_icona {
     background-color: rgb(109, 109, 109);
     border-radius: 50%;
     height: 20px;
@@ -124,14 +124,14 @@ nav{
     cursor: pointer;
 }
 
-#user h4{
+#user h4 {
     font-size: 10px;
     display: none;
     color: #fff;
 }
 
 /* parte centrale  */
-.main_destro{
+.main_destro {
     height: 100%;
     width: calc(100% - 50px);
     background-color: rgb(16, 19, 25);
@@ -140,7 +140,7 @@ nav{
     left: 50px;
 }
 
-#up_piano{
+#up_piano {
     width: calc(100% - 60px);
     height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -153,7 +153,14 @@ nav{
     z-index: 2;
 }
 
-#up_bottone{
+@media screen and (max-height: 350px) {
+    #up_piano {
+        display: none;
+    }
+    
+}
+
+#up_bottone {
     font-family: 'Montserrat', sans-serif;
     font-size: 9px;
     border-radius: 30px;
@@ -165,12 +172,12 @@ nav{
     cursor: pointer;
 }
 
-.contenitore_bottone:hover #up_bottone{
+.contenitore_bottone:hover #up_bottone {
     transform: scale(1.1);
 }
 
 /* parte centrale musicale  */
-.parte_centrale{
+.parte_centrale {
     height: calc(100vh - 60px);
     width: 100%;
     background-color: rgb(20, 25, 34);
@@ -178,26 +185,26 @@ nav{
     padding-top: 70px;
 }
 
-#lista{
+#lista {
     list-style-type: none;
     color: rgb(105, 108, 113);
     text-align: center;
     font-weight: 800;
-    font-size: 8px;
+    font-size: 12px;
 }
 
-#lista li{
+#lista li {
     display: inline-block;
     margin: 10px 8px;
     cursor: pointer;
     position: relative;
 }
 
-#lista li:hover .lista_testo{
+#lista li:hover .lista_testo {
     color: #fff;
 }
 
-.linea_selezione{
+.linea_selezione {
     width: 18px;
     height: 2px;
     background-color: rgb(191, 253, 91);
@@ -208,13 +215,13 @@ nav{
 }
 
 .brani_recenti,
-.creato_per{
+.creato_per {
     width: 92%;
     margin: 20px auto;
 }
 
 .brani_recenti h4,
-.creato_per h4{
+.creato_per h4 {
     font-weight: 800;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -222,14 +229,14 @@ nav{
 }
 
 .brani,
-.artisti{
+.artisti {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .singoli_brani,
-.singoli_artisti{
+.singoli_artisti {
     width: 48%;
     text-align: center;
     color: #fff;
@@ -238,13 +245,13 @@ nav{
 }
 
 .album,
-.foto_artisti{
+.foto_artisti {
     width: 100%;
     position: relative;
 }
 
 .album .far.fa-play-circle,
-.foto_artisti .far.fa-play-circle{
+.foto_artisti .far.fa-play-circle {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -254,21 +261,21 @@ nav{
 }
 
 .singoli_brani:hover .filter_play,
-.singoli_artisti:hover .filter_play{
+.singoli_artisti:hover .filter_play {
     filter: opacity(.5)
 }
 
 .singoli_brani:hover .far.fa-play-circle,
-.singoli_artisti:hover .far.fa-play-circle{
+.singoli_artisti:hover .far.fa-play-circle {
     display: block;
 }
 
 .album img,
-.foto_artisti img{
+.foto_artisti img {
     width: 100%;
 }
 
-.foto_artisti img{
+.foto_artisti img {
     border-radius: 50%;
 }
 
@@ -281,7 +288,7 @@ nav{
 }
 
 .singoli_brani span,
-.singoli_artisti span{
+.singoli_artisti span {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     color: rgb(127, 125, 132);
@@ -359,7 +366,7 @@ footer {
 }
 
 /* footer left  */
-#ascolto{
+#ascolto {
     width: 100px;
     height: 45px;
     display: flex;
@@ -368,7 +375,7 @@ footer {
     margin-left: 2%;
 }
 
-.brano{
+.brano {
     width: 78%;
     height: 100%;
     display: flex;
@@ -421,7 +428,7 @@ footer {
 }
 
 /* tasti e barra player  */
-#player{
+#player {
     width: 35%;
     min-width: 135px;
     height: 90%;
@@ -431,7 +438,7 @@ footer {
     align-items: center;
 }
 
-#tasti_player{
+#tasti_player {
     width: 135px;
     height: 50%;
     display: flex;
@@ -441,17 +448,27 @@ footer {
     font-size: 15px;
 }
 
-#tasti_player .fas{
+#tasti_player .fas {
     cursor: pointer;
 }
 
-#play_barra .far.fa-play-circle{
+#play_barra .far.fa-play-circle {
     font-size: 25px;
     cursor: pointer;
 }
 
-#play_barra:hover .far.fa-play-circle{
+#play_barra:hover .far.fa-play-circle {
     transform: scale(1.2);
+}
+
+.prova:hover {
+    animation: giro 0.5s linear;
+} 
+
+@keyframes giro {
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 #barra_minuti {
@@ -496,7 +513,7 @@ footer {
         margin-bottom: 10px;
     }
 
-    #barra_verde{
+    #barra_verde {
         width: 3px;
         height: 22px;
         background-color: rgb(191, 253, 91);
@@ -657,12 +674,12 @@ footer {
     }
     
     .singoli_brani,
-    .singoli_artisti{
+    .singoli_artisti {
         width: 24%;
         margin-right: 1%;
     } 
 
-    .brano{
+    .brano {
         width: 74%;
         height: 100%;
         display: flex;
